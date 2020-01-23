@@ -26,5 +26,11 @@ namespace dn.Controllers
         {
             return bacLayer.FetchAll();
         }
+
+        [HttpPost]
+        public WeatherForecast Post(WeatherForecast weather) {
+            bacLayer.InsertForecast(weather);
+            return weather;
+        }
     }
 }
